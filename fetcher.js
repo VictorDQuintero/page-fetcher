@@ -22,8 +22,12 @@ const fetcher = function (url, path, callback) {
           // if no error, calls callback function and sends body and filePath
           data = body;
           callback(data, path);
+        } else {
+          console.log("Invalid File Path");
         }
       });
+    } else {
+      console.log("Invalid URL");
     }
   });
 };
